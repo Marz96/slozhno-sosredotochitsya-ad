@@ -1,11 +1,18 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" class="theme-dark">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="dark light">
     <title>Сложно сосредоточиться</title>
-    <script src="./scripts/script.js"></script>
+    <link rel="stylesheet" href="./fonts/fonts.css">
+    <link rel="stylesheet" href="./styles/variables.css">
+    <link rel="stylesheet" href="./styles/globals.css">
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/dark.css">
+    <link rel="stylesheet" href="./styles/light.css">
+    <link rel="icon" href="./images/favicon.svg" type="image/svg+xml">
   </head>
   <body class="page">
     <header class="header decorated-zone">
@@ -35,6 +42,128 @@
           </li>
         </ul>
       </nav>
+      <div class="header__decoration" aria-hidden="true">REC</div>
+      <h1 class="header__title">no focus</h1>
+      <p class="header__text title-decor">
+        Что делать, когда не можешь делать ничего<br>
+        Или почему нам так сложно сконцентрироваться, особенно когда очень надо
+      </p>
     </header>
+
+    <main class="main">
+      <section class="concentration section">
+        <h2 class="section__title">Почему сосредоточиться так сложно</h2>
+        <div class="section__content">
+          <article class="article">
+            <h3 class="article__title title-decor">Многозадачность</h3>
+            <p class="article__text">
+              Особенно сложно сосредоточиться, когда задач много и все они — важные. 
+              Где же легендарная многозадачность, когда она так нужна вам (и всем нанимающим менеджерам 
+              этого мира)? А дело в том, что её просто не существует. Исследователи 
+              <a href="#" class="link">выяснили</a>, что мозгу тяжело концентрироваться даже на двух делах одновременно. 
+              А когда в поле внимания попадает несколько важных задач, организм паникует и выделяет кортизол и адреналин — 
+              «гормоны стресса». Из-за этого мы работаем невнимательно: ошибаемся и быстро устаём.
+            </p>
+          </article>
+          <article class="article">
+            <h3 class="article__title title-decor">Дофамин</h3>
+            <p class="article__text">
+              С гормонами стресса всё понятно, но дальше — ещё интереснее. В нашей невозможности 
+              сосредоточиться замешан и дофамин — гормон, который отвечает за мотивацию и чувство удовлетворения. 
+              Дофамин помогает нам чувствовать себя хорошо, когда мы выполняем задачу и получаем заслуженную награду. 
+              Но здесь есть и обратная сторона: мы отвлекаемся на то, что приносит нам мгновенное удовлетворение — 
+              например, смотрим лайки в соцсетях или листаем ленту. В итоге мы понимаем, что потратили полдня, 
+              а важная задача так и осталась нерешённой.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="solutions section">
+        <h2 class="section__title">Что снижает концентрацию внимания?</h2>
+        <div class="section__content">
+          <article class="article">
+            <h3 class="article__title title-decor">Многозадачность</h3>
+            <p class="article__text">
+              Как концентрация может снижаться из-за… концентрации? Любая стрессовая ситуация (и резко 
+              приближающийся дедлайн в том числе) заставляет наш мозг работать по принципу «бей или беги». 
+              Из-за этого сужается <a href="#" class="link">туннель зрения</a> — мы буквально перестаём видеть 
+              возможности и варианты решений, которые были очевидны ещё вчера. А ещё стресс — главный враг 
+              сосредоточенности. Когда мы нервничаем, внимание рассеивается, и продуктивность падает.
+            </p>
+          </article>
+          <article class="article">
+            <h3 class="article__title title-decor">Еда</h3>
+            <p class="article__text">
+              «Быстрые углеводы» — сахар, белый хлеб, сладости — молниеносно доставляют в мозг энергию 
+              и помогают ему лучше работать. Но уходит эта энергия так же быстро, как и приходит. А мы в 
+              результате попадаем на «углеводные качели»: как только действие «быстрых углеводов» заканчивается, 
+              мы чувствуем усталость и сонливость. И хотим ещё больше быстрых углеводов.
+            </p>
+          </article>
+          <article class="article">
+            <h3 class="article__title title-decor">Гаджеты</h3>
+            <p class="article__text">
+              Да-да, это та самая ситуация, когда оно само вас отвлекает. Даже если у вас включен режим 
+              «Не беспокоить» на телефоне, любое уведомление на экране (например, о разряженной батарее) 
+              может сорвать фокус с задачи. А если notification не приходят, нам становится скучно, и мы 
+              сами ищем, чем бы отвлечься. В результате цикл «скроллинг — чувство вины — стресс — срыв дедлайна» 
+              завершается, и вы снова не справляетесь с работой.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="focus section">
+        <h2 class="section__title">Как концентрироваться лучше, чем золотая рыбка</h2>
+        <div class="section__content">
+          <article class="article">
+            <h3 class="article__title title-decor">5 простых (на самом деле не очень) шагов</h3>
+            <p class="article__text">
+              Чтобы не поддаваться прокрастинации и сосредоточиться на задаче, 
+              можно воспользоваться методом «Помодоро». Это техника тайм-менеджмента, 
+              когда вы работаете 25 минут, а потом отдыхаете 5 минут. После четырёх таких 
+              подходов вы делаете перерыв на 15-30 минут.
+            </p>
+            <p class="article__text">
+              В это время не стоит проверять соцсети или отвечать на сообщения — иначе 
+              мозг не успеет отдохнуть. Лучше встать, размяться, посмотреть в окно или 
+              помедитировать.
+            </p>
+          </article>
+          <article class="article">
+            <h3 class="article__title title-decor">А можно придумать что-то посложнее?</h3>
+            <p class="article__text">
+              Можно. Одна из таких техник — это метод «Лягушка». Он помогает справиться 
+              с прокрастинацией и фокусироваться на сложных задачах. «Лягушка» — это самый 
+              неприятный и сложный пункт из вашего списка задач. Вам нужно начать день с него — 
+              и тогда остальные дела покажутся пустяком.
+            </p>
+            <p class="article__text">
+              Ещё один способ — «Съесть слона». Если задача кажется слишком сложной и непреодолимой, 
+              разделите её на несколько маленьких подзадач и выполняйте их по очереди. Так вы постепенно 
+              «съедите» всего «слона», даже не заметив этого.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="gallery section">
+        <h2 class="section__title title-decor">А вот в это можно посмотреть</h2>
+        <div class="gallery__grid">
+          <img src="./images/books.png" alt="Стопка книг" class="gallery__image" loading="lazy">
+          <img src="./images/cover-image.png" alt="Абстрактное изображение" class="gallery__image" loading="lazy">
+          <img src="./images/sunset.png" alt="Закат" class="gallery__image" loading="lazy">
+          <img src="./images/city.png" alt="Городской пейзаж" class="gallery__image" loading="lazy">
+          <img src="./images/mountain.png" alt="Горы" class="gallery__image" loading="lazy">
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer decorated-zone">
+      <h2 class="footer__title">focus</h2>
+    </footer>
+
+    <script src="./scripts/script.js"></script>
   </body>
 </html>

@@ -142,8 +142,9 @@
 }
 
 .title-decor {
-  background-color: var(--article-title-bg);
-  color: var(--article-title-color);
+  display: block;
+  padding: 4px 12px;
+  border-radius: 8px;
   font-weight: bold;
 }
 
@@ -174,6 +175,9 @@
   inline-size: 100%;
   block-size: 100%;
   object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(255, 0, 102, 0.3);
+  border: 2px solid rgba(255, 0, 102, 0.2);
 }
 
 .footer {

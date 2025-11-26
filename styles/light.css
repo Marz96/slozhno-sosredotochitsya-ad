@@ -1,12 +1,5 @@
-/*
-  Специально для светлой темы при наличии класса.
-  Здесь окажутся стили, которые нужно переопределить принудительно,
-  переключая тему
-*/
-
 :root.theme-light {
-  
-  --accent-color: #ff8dcb;
+  --accent-color: #353430;
   --bg-color: #fff1f7;
   --text-color: #353430;
   --title-color: #ffc2e6;
@@ -17,6 +10,8 @@
   --bg-image: url('../images/cover-image-light.png');
   --article-title-bg: #ff8dcb;
   --article-title-color: #353430;
+  --decor-color: #353430;
+  --menu-color: #353430;
 }
 
 .theme-light .header__decoration {
@@ -29,7 +24,7 @@
 
 @media (prefers-color-scheme: light) {
   :root {
-    --accent-color: #ff8dcb;
+    --accent-color: #353430;
     --bg-color: #fff1f7;
     --text-color: #353430;
     --title-color: #ffc2e6;
@@ -40,6 +35,8 @@
     --bg-image: url('../images/cover-image-light.png');
     --article-title-bg: #ff8dcb;
     --article-title-color: #353430;
+    --decor-color: #353430;
+    --menu-color: #353430;
   }
 
   .header__decoration {
@@ -50,4 +47,3 @@
     border-color: var(--button-color);
   }
 }
-

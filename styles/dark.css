@@ -1,11 +1,4 @@
-/*
-  Специально для тёмной темы при наличии класса,
-  здесь окажутся стили, которые нужно переопределить принудительно,
-  переключая тему
-*/
-
 :root.theme-dark {
-  
   --accent-color: #ff0070;
   --bg-color: #000028;
   --text-color: #f1b2ce;
@@ -17,5 +10,6 @@
   --bg-image: url('../images/cover-image-dark.png');
   --article-title-bg: #ff0070;
   --article-title-color: #000028;
+  --decor-color: #ff0070;
+  --menu-color: #ff0070;
 }
-

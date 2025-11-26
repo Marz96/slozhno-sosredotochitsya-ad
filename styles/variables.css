@@ -1,17 +1,17 @@
 :root {
-  /* По умолчанию — неоновая тёмная тема (как в макете) */
-  --accent-color: #FF0066;
-  --bg-color: #0F0E1A;
-  --text-color: #F8F8F8;
-  --title-color: #FF0066;
-  --section-title-color: #FF0066;
-  --button-color: #FF0066;
+  --accent-color: #ff0066;
+  --bg-color: #0f0e1a;
+  --text-color: #f8f8f8;
+  --title-color: transparent;
+  --section-title-color: #ff0066;
+  --button-color: #ff0066;
   --button-hover-color: rgba(255, 0, 102, 0.4);
-  --link-shadow: #FF0066;
+  --link-shadow: #ff0066;
   --bg-image: url('../images/cover-image-dark.png');
-  --article-title-bg: #FF0066;
+  --article-title-bg: #ff0066;
   --article-title-color: #000000;
+  --title-gradient: linear-gradient(90deg, #ff0066, #9d00ff, #00ffcf);
   --font-family: 'Inter', sans-serif;
   --font-size: 18px;
-  --line-height: 1.5;
+  --line-height: 1.55;
 }

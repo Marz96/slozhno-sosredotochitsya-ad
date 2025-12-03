@@ -1,22 +1,23 @@
 :root {
-  /* Основные переменные для светлой темы (по умолчанию) */
-  --main-font-weight: 400;
-  --accent-font-weight: 700;
+  /* Шрифты */
   --font-family: "Inter-Variable", sans-serif;
   --accent-font: "PressStart2P", fantasy;
   
-  /* Цвета светлой темы */
+  /* Насыщенность шрифтов */
+  --main-font-weight: 400;
+  --accent-font-weight: 700;
+  
+  /* Цветовая схема по умолчанию (светлая) */
   --bg-color: #fff;
   --accent-color: #000;
-  --bg-image: repeating-linear-gradient(
-      to left,
-      #d3d3d3 0 2px,
-      transparent 2px 4px
-    ),
-    repeating-linear-gradient(to bottom, #d3d3d3 0 2px, transparent 2px 4px),
-    linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a);
-  --label-shadow: #fff;
   --button-text-color: #fff;
+  --label-shadow: #fff;
   --contour-color: #000;
   --fill-color: #ff0000;
+  
+  /* Фоновое изображение */
+  --bg-image: 
+    repeating-linear-gradient(to left, #d3d3d3 0 2px, transparent 2px 4px),
+    repeating-linear-gradient(to bottom, #d3d3d3 0 2px, transparent 2px 4px),
+    linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a);
 }

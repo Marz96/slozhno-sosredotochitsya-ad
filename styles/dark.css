@@ -1,23 +1,18 @@
-/* Принудительная тёмная тема — совпадает с макетом */
-html.theme-dark,
-body.theme-dark,
 :root.theme-dark {
-  --title-color: #DB00FF;
+  --bg-color: #000028;
   --text-color: #F1B2CE;
-  --sub-text-color: #000028;
   --accent-color: #FF0070;
-  --btn-color: #FF0070;
-  --background-image: url("../images/cover-image-dark.png");
+  --title-color: #DB00FF;
+  --bg-image: url("../images/cover-image-dark.png");
 }
 
-/* Авто-режим: если у пользователя в системе выбран dark */
+/* AUTO — если стоит prefers-color-scheme: dark */
 @media (prefers-color-scheme: dark) {
-  :root:not(.theme-light):not(.theme-dark) {
-    --title-color: #DB00FF;
-    --text-color: #F1B2CE;
-    --sub-text-color: #000028;
-    --accent-color: #FF0070;
-    --btn-color: #FF0070;
-    --background-image: url("../images/cover-image-dark.png");
+  :root.theme-auto {
+      --bg-color: #000028;
+      --text-color: #F1B2CE;
+      --accent-color: #FF0070;
+      --title-color: #DB00FF;
+      --bg-image: url("../images/cover-image-dark.png");
   }
 }

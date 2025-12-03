@@ -2,12 +2,30 @@
 :root.theme-dark {
   --bg-color: #000;
   --accent-color: #00cc14;
+  --button-text-color: #00cc14;
   --label-shadow: #000;
   --contour-color: #00cc14;
-  --fill-color: #00cc14;
+  --fill-color: #ff0000;
   
   --bg-image: 
-    repeating-linear-gradient(to left, #000 0 2px, transparent 2px 4px),
+    repeating-linear-gradient(to right, #000 0 2px, transparent 2px 4px),
     repeating-linear-gradient(to bottom, #000 0 2px, transparent 2px 4px),
     linear-gradient(to bottom, #007f0c, #004306);
+}
+
+/* Авторежим для темной темы системы */
+@media (prefers-color-scheme: dark) {
+  :root:not(.theme-light):not(.theme-dark) {
+    --bg-color: #000;
+    --accent-color: #00cc14;
+    --button-text-color: #00cc14;
+    --label-shadow: #000;
+    --contour-color: #00cc14;
+    --fill-color: #ff0000;
+    
+    --bg-image: 
+      repeating-linear-gradient(to right, #000 0 2px, transparent 2px 4px),
+      repeating-linear-gradient(to bottom, #000 0 2px, transparent 2px 4px),
+      linear-gradient(to bottom, #007f0c, #004306);
+  }
 }

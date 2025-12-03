@@ -1,5 +1,5 @@
 :root.theme-light {
-  --accent-color: #ff8dcb;
+  --accent-color: #353430;
   --bg-color: #fff1f7;
   --text-color: #353430;
   --title-color: #ffc2e6;
@@ -10,12 +10,21 @@
   --bg-image: url('../images/cover-image-light.png');
   --article-title-bg: #ff8dcb;
   --article-title-color: #353430;
+  --decor-color: #353430;
+  --menu-color: #353430;
 }
 
-/* Автоматическая светлая тема */
+.theme-light .header__decoration {
+  display: none;
+}
+
+.theme-light .header__theme-menu-button_active {
+  border-color: var(--button-color);
+}
+
 @media (prefers-color-scheme: light) {
   :root {
-    --accent-color: #ff8dcb;
+    --accent-color: #353430;
     --bg-color: #fff1f7;
     --text-color: #353430;
     --title-color: #ffc2e6;
@@ -26,6 +35,8 @@
     --bg-image: url('../images/cover-image-light.png');
     --article-title-bg: #ff8dcb;
     --article-title-color: #353430;
+    --decor-color: #353430;
+    --menu-color: #353430;
   }
 
   .header__decoration {
@@ -35,9 +46,4 @@
   .header__theme-menu-button_active {
     border-color: var(--button-color);
   }
-}
-
-/* Скрываем REC в светлой теме при принудительном переключении */
-.theme-light .header__decoration {
-  display: none;
 }

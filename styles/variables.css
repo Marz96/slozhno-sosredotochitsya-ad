@@ -1,17 +1,18 @@
 :root {
-  /* Тёмная тема — основная */
-  --accent-color: #ff0070;
-  --bg-color: #000028;
-  --text-color: #f1b2ce;
-  --title-color: #db00ff;
-  --section-title-color: #ff0070;
-  --button-color: #ff0070;
-  --button-hover-color: rgba(255, 0, 112, 0.4);
-  --link-shadow: #ff0070;
+  --accent-color: #ff0066;
+  --bg-color: #0f0e1a;        
+  --text-color: #f8f8f8;
+  --title-color: transparent;
+  --section-title-color: #ff0066;
+  --button-color: #ff0066;
+  --button-hover-color: rgba(255, 0, 102, 0.4);
+  --link-shadow: #ff0066;
   --bg-image: url('../images/cover-image-dark.png');
-  --article-title-bg: #ff0070;
-  --article-title-color: #000028;
-  --font-family: 'IBM Plex mono', monospace;
+  --article-title-bg: #ff0066;
+  --article-title-color: #000000;
+  --title-gradient: linear-gradient(90deg, #ff0066, #9d00ff, #00ffcf);
+
+  --font-family: 'Inter', sans-serif;
   --font-size: 18px;
-  --line-height: 1.3;
+  --line-height: 1.55;
 }

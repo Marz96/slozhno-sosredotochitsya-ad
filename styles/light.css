@@ -1,11 +1,4 @@
-/*
-  Специально для светлой темы при наличии класса.
-  Здесь окажутся стили, которые нужно переопределить принудительно,
-  переключая тему
-*/
-
 :root.theme-light {
-  
   --accent-color: #ff8dcb;
   --bg-color: #fff1f7;
   --text-color: #353430;
@@ -19,14 +12,7 @@
   --article-title-color: #353430;
 }
 
-.theme-light .header__decoration {
-  display: none;
-}
-
-.theme-light .header__theme-menu-button_active {
-  border-color: var(--button-color);
-}
-
+/* Автоматическая светлая тема */
 @media (prefers-color-scheme: light) {
   :root {
     --accent-color: #ff8dcb;
@@ -51,3 +37,7 @@
   }
 }
 
+/* Скрываем REC в светлой теме при принудительном переключении */
+.theme-light .header__decoration {
+  display: none;
+}

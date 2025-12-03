@@ -1,22 +1,30 @@
 <!DOCTYPE html>
 <html lang="ru" class="page">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="color-scheme" content="light dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <!-- Основная тема — dark, затем light -->
+    <meta name="color-scheme" content="dark light" />
     <title>Сложно сосредоточиться</title>
-    <!-- Порядок ВАЖЕН: сначала шрифты -->
+  
+    <!-- 1) Шрифты -->
     <link rel="stylesheet" href="./fonts/fonts.css">
-    <!-- Затем переменные -->
+  
+    <!-- 2) Переменные и глобальные стили -->
     <link rel="stylesheet" href="./styles/variables.css">
-    <!-- Затем основные стили -->
+    <link rel="stylesheet" href="./styles/globals.css">
+  
+    <!-- 3) Основной файл стилей (mobile-first) -->
     <link rel="stylesheet" href="./styles/style.css">
-    <!-- Затем темы -->
+  
+    <!-- 4) Цветовые темы: сначала dark, затем light -->
     <link rel="stylesheet" href="./styles/dark.css">
     <link rel="stylesheet" href="./styles/light.css">
+  
+    <!-- Скрипты (defer) -->
     <script src="./scripts/theme-changer.js" defer></script>
-    <script src="./scripts/like-button.js" defer></script>
-</head>
+    <script src="./scripts/script.js" defer></script>
+  </head>
 <body class="page">
     <header class="header">
         <h1 class="header__logo">сложно<br>сосредоточиться</h1>

@@ -1,384 +1,205 @@
-/* Сброс отступов */
-body {
-  margin: 0;
-  padding: 0;
-}
+/* ===========================
+   MAIN STYLES (mobile-first)
+   =========================== */
 
-/* Основные стили страницы */
-.page {
-  font-family: var(--font-family);
-  background-color: var(--bg-color);
-  background-image: var(--bg-image);
-  background-size: cover;
-  background-attachment: fixed;
-  background-position: center;
-  min-height: 100vh;
-  color: var(--accent-color);
-  display: flex;
-  flex-direction: column;
-}
+/* базовый сброс, globals покрывает основное */
+body { margin: 0; padding: 0; }
 
-/* Header */
+/* header / footer: full-screen blocks (100vh) */
 .header {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  display: grid;
   align-items: center;
-  min-height: 100vh;
-  padding: 20px;
-  font-family: var(--accent-font);
-  text-transform: uppercase;
+  justify-items: center;
+  height: 100vh;           /* обязательное требование */
+  min-height: 668px;       /* минимальная высота (px) */
+  padding-block: 20px;
   text-align: center;
+  position: relative;
+  color: var(--text-color);
 }
 
+/* REC (декоративный элемент) — по умолчанию скрыт; показывается в dark theme */
+.header__rec {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 14px;
+  padding: 6px 10px;
+  border: 2px solid var(--border-color);
+  color: var(--rec-color);
+  display: none;           /* показываем только в dark (через тему) */
+  pointer-events: none;
+}
+
+/* логотип (NO FOCUS) */
 .header__logo {
-  font-size: clamp(3.063rem, 2.71rem + 1.5vw, 4.063rem);
-  margin: 0 0 20px;
-  line-height: 1;
-  text-shadow: 4px 4px 0 var(--accent-color);
+  margin: 0;
+  font-family: var(--accent-font);
+  font-weight: 700;
+  color: var(--heading-color);
+  /* крупный заголовок: mobile formula */
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  line-height: 0.9;
+  text-shadow: 4px 4px 0 var(--shadow-color);
 }
 
-.header__title {
-  font-size: clamp(0.875rem, 0.677rem + 0.85vw, 1.438rem);
-  margin: 0 0 10px;
+/* lead paragraph with decorative background */
+.title-decor {
+  display: inline-block;
+  padding: 12px 18px;
+  background-color: var(--accent-color);
+  color: var(--bg-color);
+  border-radius: 4px;
+  margin-top: 18px;
+  font-weight: 700;
 }
 
-.header__subtitle {
-  font-size: clamp(0.875rem, 0.677rem + 0.85vw, 1.438rem);
-  margin: 0 0 25px;
+/* theme menu (vertical on mobile) */
+.header__theme-menu {
+  margin-top: 28px;
 }
 
 .theme-menu__list {
   display: flex;
   flex-direction: column;
-  gap: 14px;
-  margin: 0;
-  padding: 0;
-  list-style: none;
+  gap: 12px;
+  align-items: center;
 }
 
 .theme-menu__button {
-  position: relative;
-  border: none;
-  font-size: 14px;
-  text-transform: uppercase;
   background: transparent;
-  transition: opacity 0.3s ease;
+  color: var(--heading-color);
+  border: 2px solid transparent;
+  padding: 8px 10px;
+  text-transform: lowercase;
   cursor: pointer;
-  color: var(--accent-color);
-  padding: 0;
-  font-family: inherit;
-}
-
-.theme-menu__button:disabled {
-  opacity: 0.6;
-  pointer-events: none;
-}
-
-.theme-menu__button:disabled::before {
-  content: "▶";
-  position: absolute;
-  left: -20px;
-  animation: arrow 0.5s infinite ease-in-out alternate;
-}
-
-.theme-menu__button:hover {
-  opacity: 0.6;
-}
-
-.theme-menu__button:focus {
-  outline: none;
 }
 
 .theme-menu__button:focus-visible {
-  opacity: 0.6;
+  outline: 2px solid var(--accent-color);
+  outline-offset: 3px;
 }
 
-.theme-menu__button::after {
-  content: "";
-  display: block;
-  width: 0%;
-  height: 2px;
-  background-color: var(--accent-color);
-  transition: width 0.3s ease;
-}
-
-.theme-menu__button:focus-visible::after {
-  width: 100%;
-}
-
-@keyframes arrow {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(4px);
-  }
-}
-
-/* Основной контент */
+/* content area */
 .content {
-  flex: 1;
-  max-width: 696px;
   width: 100%;
+  max-width: 696px;
   margin: 0 auto;
-  padding: 50px 20px;
+  padding-block: 50px;
+  padding-inline: 20px;
+  color: var(--text-color);
+  flex: 1 0 auto;
 }
 
-/* Карточки */
+/* card */
 .card {
-  border: 2px solid var(--accent-color);
-  background-color: var(--bg-color);
+  border: 2px solid var(--border-color);
+  background: transparent;
   margin-bottom: 50px;
+  overflow: hidden;
 }
 
 .card__title {
-  font-size: 18px;
-  font-variation-settings: "wght" var(--accent-font-weight);
-  padding: 5px 10px;
-  border-bottom: 2px solid var(--accent-color);
   margin: 0;
-  background-color: var(--accent-color);
+  padding: 6px 10px;
+  background: var(--accent-color);
   color: var(--bg-color);
-}
-
-.title-decor {
-  background-color: var(--accent-color);
-  color: var(--bg-color);
+  font-weight: 700;
 }
 
 .card__image-container {
   position: relative;
-  border-bottom: 2px solid var(--accent-color);
+  border-bottom: 2px solid var(--border-color);
 }
 
 .card__image {
   display: block;
   width: 100%;
-  aspect-ratio: 1 / 1;
+  height: auto;
+  aspect-ratio: 1/1;
   object-fit: cover;
+  max-width: 100%;
 }
 
 .card__label {
   position: absolute;
-  top: 25px;
-  right: 25px;
-  opacity: 0.5;
+  top: 20px;
+  right: 20px;
+  opacity: 0.6;
   color: var(--accent-color);
-  font-family: var(--accent-font);
-  font-size: 14px;
-  text-shadow: 
-    -1px 0 var(--label-shadow),
-    0 1px var(--label-shadow),
-    1px 0 var(--label-shadow),
-    0 -1px var(--label-shadow);
+  font-weight: 700;
   mix-blend-mode: hard-light;
+  pointer-events: none;
 }
 
 .card__text {
-  padding: 25px;
+  padding: 24px;
+  color: var(--text-color);
   font-size: 18px;
   line-height: 1.16;
-  font-variation-settings: "wght" var(--main-font-weight);
 }
 
-.card__subtitle {
-  font-size: 18px;
-  font-variation-settings: "wght" var(--accent-font-weight);
-  margin: 1.5em 0 0.5em;
-}
-
-.card__footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 25px;
-  border-top: 2px solid var(--accent-color);
-}
-
-/* Кнопки */
-.button {
-  position: relative;
-  border: 2px solid var(--accent-color);
-  padding: 10px 20px;
-  font-family: var(--accent-font);
-  font-size: 14px;
-  background-color: var(--bg-color);
-  transition: box-shadow 0.3s ease;
-  cursor: pointer;
-  color: var(--button-text-color);
-  overflow: hidden;
-}
-
-.button:focus {
-  outline: none;
-}
-
-.button:focus-visible {
-  box-shadow: 2px 2px 0 var(--accent-color);
-}
-
-.button::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-  background-color: var(--accent-color);
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 0.5s ease-in-out;
-}
-
-.button:hover::before {
-  transform: scaleX(1);
-}
-
-.button__text {
-  position: relative;
-  z-index: 2;
-  color: var(--button-text-color);
-  mix-blend-mode: difference;
-}
-
-.card__icon-button {
-  border: 2px solid transparent;
-  padding: 0;
-  background: transparent;
-  cursor: pointer;
-}
-
-.card__icon-button:focus-visible {
-  border-color: var(--accent-color);
-}
-
-/* Footer на всю высоту экрана */
+/* footer */
 .footer {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  display: grid;
   align-items: center;
-  min-height: 100vh;
-  padding: 20px;
-  font-family: var(--accent-font);
-  text-transform: uppercase;
+  justify-items: center;
+  height: 100vh;         /* обязательное требование */
+  min-height: 480px;
+  padding-block: 20px;
   text-align: center;
+  color: var(--text-color);
 }
 
 .footer__title {
-  font-size: clamp(3.063rem, 2.71rem + 1.5vw, 4.063rem);
-  margin: 0 0 20px;
-  text-shadow: 4px 4px 0 var(--accent-color);
-}
-
-.footer__text {
-  font-size: clamp(0.875rem, 0.677rem + 0.85vw, 1.438rem);
-  margin: 0 0 30px;
-}
-
-.footer__button {
-  margin-top: 20px;
-}
-
-/* Диалог */
-.dialog {
-  border: 2px solid var(--accent-color);
-  padding: 30px;
-  color: var(--accent-color);
+  margin: 0;
   font-family: var(--accent-font);
-  font-size: 14px;
-  text-transform: uppercase;
-  background-color: var(--bg-color);
-  max-width: 353px;
-  margin: auto;
+  font-size: clamp(3.063rem, 2.71rem + 1.5vw, 4.063rem);
+  text-shadow: 4px 4px 0 var(--shadow-color);
 }
 
-.dialog::backdrop {
-  background-color: rgb(0 0 0 / 0.75);
-}
-
-.dialog__container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 30px;
-}
-
-.dialog__content {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  line-height: 1.5;
-}
-
-.dialog__icon {
-  width: 39px;
-  height: 39px;
+/* buttons */
+.button {
+  position: relative;
+  border: 2px solid var(--border-color);
+  padding: 10px 20px;
+  background: transparent;
   color: var(--accent-color);
+  cursor: pointer;
 }
 
-.dialog__button {
-  width: 100%;
+.button:focus-visible {
+  outline: 3px solid var(--accent-color);
+  outline-offset: 2px;
 }
 
-/* Адаптивность */
-@media (max-width: 375px) {
-  .content {
-    padding: 100px 0;
-  }
-  
-  .header,
-  .footer {
-    padding: 100px 20px;
-  }
-  
-  .card {
-    margin-bottom: 100px;
-  }
-  
-  .card__label {
-    top: 23px;
-    right: 11px;
-  }
-  
-  .header__logo,
-  .footer__title {
-    font-size: clamp(2.5rem, 2.287rem + 0.85vw, 3.063rem);
-  }
+/* icon button (like) */
+.card__icon-button {
+  background: transparent;
+  border: 2px solid transparent;
+  padding: 8px;
 }
 
-@media (min-width: 376px) and (max-width: 768px) {
-  .content {
-    padding: 102px 20px;
-  }
-  
-  .header,
-  .footer {
-    padding: 102px 20px;
-  }
-  
-  .card {
-    margin-bottom: 102px;
-  }
-}
-
+/* responsive typographic tweaks for header title */
 @media (min-width: 769px) {
-  .content {
-    max-width: 696px;
-    padding: 102px 0;
-  }
-  
-  .header,
-  .footer {
-    padding: 102px 20px;
-  }
-  
-  .header__logo,
-  .footer__title {
+  .header__logo {
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
+
+  .theme-menu__list {
+    flex-direction: column;
+    gap: 14px;
+    position: absolute;
+    right: 40px;
+    top: 40px;
+  }
 }
 
-/* Фикс горизонтального скролла */
-html {
-  overflow-x: hidden;
+/* small devices adjustments */
+@media (max-width: 375px) {
+  .content { padding-block: 100px; }
+  .header, .footer { padding-inline: 20px; }
+  .card { margin-bottom: 100px; }
+  .card__label { right: 12px; top: 18px; }
+  .header__logo { font-size: clamp(2.5rem, 2.287rem + 0.85vw, 3.063rem); }
 }

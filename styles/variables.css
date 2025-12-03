@@ -1,23 +1,30 @@
+/* ===========================
+   VARIABLES (base — DARK)
+   =========================== */
+
+/* основные переменные — по умолчанию (dark — основная) */
 :root {
-  /* Шрифты */
-  --font-family: "Inter-Variable", sans-serif;
+  /* Цвета (dark theme values as default) */
+  --bg-color: #000028;       /* фон страницы (темный) */
+  --text-color: #F1B2CE;     /* основной текст (светло-розовый) */
+  --heading-color: #DB00FF;  /* крупные заголовки (фиолет) */
+  --accent-color: #FF0070;   /* акцент (яркий розовый) */
+  --muted-color: #F1B2CE;    /* второстепенный текст */
+  --shadow-color: #FF0070;   /* тень/акцент */
+
+  /* декоративные / системные цвета */
+  --rec-color: #FF0070;      /* REC в dark */
+  --border-color: #FF0070;   /* декоративные уголки */
+
+  /* фоновые изображения */
+  --page-bg-image: url("../images/cover-image-dark.png");
+
+  /* типографика */
+  --font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   --accent-font: "PressStart2P", fantasy;
-  
-  /* Насыщенность */
-  --main-font-weight: 400;
-  --accent-font-weight: 700;
-  
-  /* Цвета светлой темы (по умолчанию) */
-  --bg-color: #fff;
-  --accent-color: #000;
-  --button-text-color: #fff;
-  --label-shadow: #fff;
-  --contour-color: #000;
-  --fill-color: #ff0000;
-  
-  /* Фон светлой темы */
-  --bg-image: 
-    repeating-linear-gradient(to right, #d3d3d3 0 2px, transparent 2px 4px),
-    repeating-linear-gradient(to bottom, #d3d3d3 0 2px, transparent 2px 4px),
-    linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a);
+  --base-font-size: 16px;
+  --line-height: 1.2;
+
+  /* контейнер */
+  --container-max-width: 1200px;
 }

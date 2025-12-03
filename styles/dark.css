@@ -1,31 +1,47 @@
-/* Темная тема через класс */
+/* ======================================================
+   DARK THEME (explicit) — переопределение переменных
+   Поддерживаем несколько селекторов (html / body / :root),
+   чтобы работало вне зависимости от того, куда JS ставит класс.
+   ====================================================== */
+
+/* Принудительный dark (если JS добавляет класс на html) */
+html.theme-dark,
+body.theme-dark,
 :root.theme-dark {
-  --bg-color: #000;
-  --accent-color: #00cc14;
-  --button-text-color: #00cc14;
-  --label-shadow: #000;
-  --contour-color: #00cc14;
-  --fill-color: #ff0000;
-  
-  --bg-image: 
-    repeating-linear-gradient(to right, #000 0 2px, transparent 2px 4px),
-    repeating-linear-gradient(to bottom, #000 0 2px, transparent 2px 4px),
-    linear-gradient(to bottom, #007f0c, #004306);
+  --bg-color: #000028;
+  --text-color: #F1B2CE;
+  --heading-color: #DB00FF;
+  --accent-color: #FF0070;
+  --muted-color: #F1B2CE;
+  --shadow-color: #FF0070;
+
+  --rec-color: #FF0070;
+  --border-color: #FF0070;
+
+  --page-bg-image: url("../images/cover-image-dark.png");
 }
 
-/* Авторежим для темной темы системы */
+/* Авторежим: если у пользователя в системе dark (theme-auto)
+   и JS не переопределил — покрываем через media query */
 @media (prefers-color-scheme: dark) {
   :root:not(.theme-light):not(.theme-dark) {
-    --bg-color: #000;
-    --accent-color: #00cc14;
-    --button-text-color: #00cc14;
-    --label-shadow: #000;
-    --contour-color: #00cc14;
-    --fill-color: #ff0000;
-    
-    --bg-image: 
-      repeating-linear-gradient(to right, #000 0 2px, transparent 2px 4px),
-      repeating-linear-gradient(to bottom, #000 0 2px, transparent 2px 4px),
-      linear-gradient(to bottom, #007f0c, #004306);
+    --bg-color: #000028;
+    --text-color: #F1B2CE;
+    --heading-color: #DB00FF;
+    --accent-color: #FF0070;
+    --muted-color: #F1B2CE;
+    --shadow-color: #FF0070;
+
+    --rec-color: #FF0070;
+    --border-color: #FF0070;
+
+    --page-bg-image: url("../images/cover-image-dark.png");
   }
+}
+
+/* показываем REC только в dark */
+html.theme-dark .header__rec,
+body.theme-dark .header__rec,
+:root.theme-dark .header__rec {
+  display: inline-block;
 }

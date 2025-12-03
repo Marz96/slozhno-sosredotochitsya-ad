@@ -1,14 +1,37 @@
-/* Светлая тема через класс */
-:root.theme-light {
-  --bg-color: #fff;
-  --accent-color: #000;
-  --button-text-color: #fff;
-  --label-shadow: #fff;
-  --contour-color: #000;
-  --fill-color: #ff0000;
-  
-  --bg-image: 
-    repeating-linear-gradient(to right, #d3d3d3 0 2px, transparent 2px 4px),
-    repeating-linear-gradient(to bottom, #d3d3d3 0 2px, transparent 2px 4px),
-    linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a);
-}
+/* ======================================================
+   LIGHT THEME (explicit)
+   Заполнено цветами из макета (Figma). REC скрыт.
+   ====================================================== */
+   html.theme-light,
+   body.theme-light,
+   :root.theme-light {
+     --bg-color: #FFC2E6;
+     --text-color: #353430;
+     --heading-color: #353430;
+     --accent-color: #FF8DCB;
+     --muted-color: #353430;
+     --shadow-color: #FF8DCB;
+   
+     --rec-color: transparent;
+     --border-color: #353430;
+   
+     --page-bg-image: url("../images/cover-image-light.png");
+   }
+   
+   /* Авторежим для системной светлой темы */
+   @media (prefers-color-scheme: light) {
+     :root:not(.theme-light):not(.theme-dark) {
+       --bg-color: #FFC2E6;
+       --text-color: #353430;
+       --heading-color: #353430;
+       --accent-color: #FF8DCB;
+       --muted-color: #353430;
+       --shadow-color: #FF8DCB;
+   
+       --rec-color: transparent;
+       --border-color: #353430;
+   
+       --page-bg-image: url("../images/cover-image-light.png");
+     }
+   }
+   

@@ -1,20 +1,14 @@
-/* ===========================
-   GLOBAL RESET + BASE
-   =========================== */
-
-/* box-sizing */
+/* BOX-SIZING */
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
 
-/* html/body base */
+/* HTML / BODY */
 html {
   height: 100%;
-  /* убираем горизонтальную прокрутку на уровне html */
-  overflow-x: hidden;
-  -webkit-text-size-adjust: 100%;
+  overflow-x: hidden; /* предотвращаем горизонтальную прокрутку */
 }
 
 body {
@@ -23,29 +17,36 @@ body {
   margin: 0 auto;
   padding: 0;
   height: 100%;
-  font-family: var(--font-family);
-  font-size: var(--base-font-size);
+  font-family: var(--font);
+  font-size: var(--font-size);
   line-height: var(--line-height);
-  background-color: var(--bg-color);
+  background-color: var(--sub-text-color);
   color: var(--text-color);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* типографика */
-h1, h2, h3, h4, h5, h6, p {
+/* Типографика - сбросы */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
   margin: 0;
 }
 
-/* списки */
+/* Списки */
 ul {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-/* кнопки и ссылки */
-button, a {
+/* Элементы управления */
+button,
+a {
   color: currentColor;
   font-family: inherit;
   font-size: inherit;
@@ -55,23 +56,32 @@ button, a {
   text-decoration: none;
 }
 
-/* контейнер */
+/* Контейнер */
 .container {
   width: 100%;
-  max-width: var(--container-max-width);
+  max-width: var(--container-max);
   margin-left: auto;
   margin-right: auto;
-  padding-inline: 20px;
+  padding-inline: var(--gutter);
 }
 
-/* .page wrapper: фон и фиксация */
+/* Визуально скрытый текст для доступности */
+.visually-hidden {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  white-space: nowrap;
+}
+
+/* Основной фон страницы */
 .page {
   min-inline-size: 375px;
   width: 100%;
-  background-image: var(--page-bg-image);
+  background-image: var(--background-image);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  /* фиксируем фон на всю страницу */
-  background-attachment: fixed;
+  background-attachment: fixed; /* фиксированный фон */
 }

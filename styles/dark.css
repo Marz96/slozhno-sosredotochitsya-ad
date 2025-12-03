@@ -1,47 +1,23 @@
-/* ======================================================
-   DARK THEME (explicit) — переопределение переменных
-   Поддерживаем несколько селекторов (html / body / :root),
-   чтобы работало вне зависимости от того, куда JS ставит класс.
-   ====================================================== */
-
-/* Принудительный dark (если JS добавляет класс на html) */
+/* Принудительная тёмная тема — совпадает с макетом */
 html.theme-dark,
 body.theme-dark,
 :root.theme-dark {
-  --bg-color: #000028;
+  --title-color: #DB00FF;
   --text-color: #F1B2CE;
-  --heading-color: #DB00FF;
+  --sub-text-color: #000028;
   --accent-color: #FF0070;
-  --muted-color: #F1B2CE;
-  --shadow-color: #FF0070;
-
-  --rec-color: #FF0070;
-  --border-color: #FF0070;
-
-  --page-bg-image: url("../images/cover-image-dark.png");
+  --btn-color: #FF0070;
+  --background-image: url("../images/cover-image-dark.png");
 }
 
-/* Авторежим: если у пользователя в системе dark (theme-auto)
-   и JS не переопределил — покрываем через media query */
+/* Авто-режим: если у пользователя в системе выбран dark */
 @media (prefers-color-scheme: dark) {
   :root:not(.theme-light):not(.theme-dark) {
-    --bg-color: #000028;
+    --title-color: #DB00FF;
     --text-color: #F1B2CE;
-    --heading-color: #DB00FF;
+    --sub-text-color: #000028;
     --accent-color: #FF0070;
-    --muted-color: #F1B2CE;
-    --shadow-color: #FF0070;
-
-    --rec-color: #FF0070;
-    --border-color: #FF0070;
-
-    --page-bg-image: url("../images/cover-image-dark.png");
+    --btn-color: #FF0070;
+    --background-image: url("../images/cover-image-dark.png");
   }
-}
-
-/* показываем REC только в dark */
-html.theme-dark .header__rec,
-body.theme-dark .header__rec,
-:root.theme-dark .header__rec {
-  display: inline-block;
 }

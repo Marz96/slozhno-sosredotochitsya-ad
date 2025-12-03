@@ -1,30 +1,20 @@
-/* ===========================
-   VARIABLES (base — DARK)
-   =========================== */
-
-/* основные переменные — по умолчанию (dark — основная) */
 :root {
-  /* Цвета (dark theme values as default) */
-  --bg-color: #000028;       /* фон страницы (темный) */
-  --text-color: #F1B2CE;     /* основной текст (светло-розовый) */
-  --heading-color: #DB00FF;  /* крупные заголовки (фиолет) */
-  --accent-color: #FF0070;   /* акцент (яркий розовый) */
-  --muted-color: #F1B2CE;    /* второстепенный текст */
-  --shadow-color: #FF0070;   /* тень/акцент */
+  /* Цвета (dark — основная тема по умолчанию) */
+  --title-color: #DB00FF;
+  --text-color: #F1B2CE;
+  --sub-text-color: #000028;
+  --accent-color: #FF0070;
+  --btn-color: #FF0070;
 
-  /* декоративные / системные цвета */
-  --rec-color: #FF0070;      /* REC в dark */
-  --border-color: #FF0070;   /* декоративные уголки */
+  /* Фон */
+  --background-image: url("../images/cover-image-dark.png");
 
-  /* фоновые изображения */
-  --page-bg-image: url("../images/cover-image-dark.png");
+  /* Типографика */
+  --font: "IBM Plex Mono", monospace;
+  --font-size: 18px;
+  --line-height: 1.3;
 
-  /* типографика */
-  --font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  --accent-font: "PressStart2P", fantasy;
-  --base-font-size: 16px;
-  --line-height: 1.2;
-
-  /* контейнер */
-  --container-max-width: 1200px;
+  /* Утилиты */
+  --container-max: 1200px;
+  --gutter: 20px;
 }

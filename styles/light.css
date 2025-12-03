@@ -1,37 +1,30 @@
-/* ======================================================
-   LIGHT THEME (explicit)
-   Заполнено цветами из макета (Figma). REC скрыт.
-   ====================================================== */
-   html.theme-light,
-   body.theme-light,
-   :root.theme-light {
-     --bg-color: #FFC2E6;
-     --text-color: #353430;
-     --heading-color: #353430;
-     --accent-color: #FF8DCB;
-     --muted-color: #353430;
-     --shadow-color: #FF8DCB;
-   
-     --rec-color: transparent;
-     --border-color: #353430;
-   
-     --page-bg-image: url("../images/cover-image-light.png");
-   }
-   
-   /* Авторежим для системной светлой темы */
-   @media (prefers-color-scheme: light) {
-     :root:not(.theme-light):not(.theme-dark) {
-       --bg-color: #FFC2E6;
-       --text-color: #353430;
-       --heading-color: #353430;
-       --accent-color: #FF8DCB;
-       --muted-color: #353430;
-       --shadow-color: #FF8DCB;
-   
-       --rec-color: transparent;
-       --border-color: #353430;
-   
-       --page-bg-image: url("../images/cover-image-light.png");
-     }
-   }
-   
+/* Принудительная светлая тема — цвета из макета */
+html.theme-light,
+body.theme-light,
+:root.theme-light {
+  --title-color: #FFC2E6;
+  --text-color: #353430;
+  --sub-text-color: #353430;
+  --accent-color: #FF8DCB;
+  --btn-color: #353430;
+  --background-image: url("../images/cover-image-light.png");
+}
+
+/* Авторежим: если пользователь в системе выбрал light */
+@media (prefers-color-scheme: light) {
+  :root:not(.theme-light):not(.theme-dark) {
+    --title-color: #FFC2E6;
+    --text-color: #353430;
+    --sub-text-color: #353430;
+    --accent-color: #FF8DCB;
+    --btn-color: #353430;
+    --background-image: url("../images/cover-image-light.png");
+  }
+}
+
+/* В светлой теме декоративные элементы (REC) скрываем */
+html.theme-light .decorative__element,
+body.theme-light .decorative__element,
+:root.theme-light .decorative__element {
+  display: none !important;
+}
